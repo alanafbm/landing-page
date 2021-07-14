@@ -1,37 +1,102 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    position: relative;
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-
-.logo {
-    position: absolute;
-    left: 15px;
-    top: 15px;
-}
-
-.text {
-    flex: 1;
-    justify-content: center;
-    padding-right: 100px;
-    padding-bottom: 200px;
-}
-
-.image {
-    flex: 1;
-    max-width: 900px;
-    max-height: 700px;
-    padding-top: 100px;
-}
-
-@media (max-width: 600px) {
-    .logo {}
-}
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            position: relative;
+        }
+        
+         :root {
+            --ff-primary: 'Poppins', sans-serif;
+            --clr-dark: #3D3D3D;
+            --clr-red: #EC615B;
+        }
+        
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        
+        .logo {
+            position: absolute;
+            left: 15px;
+            top: 15px;
+        }
+        
+        .card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        
+        .text {
+            flex: 1;
+            align-items: center;
+            font-family: var(--ff-primary);
+            max-width: 900px;
+            max-height: 700px;
+        }
+        
+        h1 {
+            font-size: 50px;
+            color: var(--clr-dark);
+            line-height: 1.2;
+        }
+        
+        p {
+            font-size: 25px;
+            color: var(--clr-red);
+        }
+        
+        .image {
+            flex: 1;
+            max-width: 900px;
+            max-height: 700px;
+            padding-top: 100px;
+        }
+        
+        @media (max-width: 1200px) {
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+            }
+            .card {
+                flex-direction: column;
+                margin-top: 250px;
+            }
+            .image {
+                max-width: 600px;
+            }
+            h1 {
+                font-size: 50px;
+            }
+            p {
+                font-size: 25px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+            }
+            .card {
+                flex-direction: column;
+                margin-top: 130px;
+            }
+            .image {
+                max-width: 350px;
+                padding-top: 30px;
+            }
+            h1 {
+                font-size: 36px;
+            }
+            p {
+                font-size: 16px;
+                line-height: 1.2;
+            }
+            .margin-top {
+                margin-top: 20px;
+            }
+        }
